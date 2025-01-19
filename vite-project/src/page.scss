@@ -10,6 +10,7 @@
     font-family: Galien-Bold;
     src: url(./fonts/Galien-Bold.ttf);
 }
+$screen-width: 1366px;
 *{
     padding: 0;
     margin: 0;
@@ -19,11 +20,34 @@
     justify-content: center;
     align-items: center;
 }
+@mixin large-text{
+    font: {
+        family: Gilroy-Bold;
+        size: 36px;
+    }
+    line-height: 46px;
+    letter-spacing: 1px;
+}
+@mixin small-text{
+    font: {
+        family: Gilroy-Light;
+        size: 16px;
+    }
+    line-height: 26px;
+    letter-spacing: 1px;
+}
+@import 'scss';
+@debug 100px + 200px;
 header{
-    width: 1366px;
+    @media screen and (max-width: 1000px){
+        width: 1px;
+    }
+    width: $screen-width;
     height: 768px;
     @extend %display-center;
     flex-direction: column;
+    background-repeat: no-repeat;
+    background-position: center;
     background-image: url(./img/background.png);
     nav{
         width: 1200px;
@@ -54,11 +78,8 @@ header{
             div:nth-of-type(2){
                 opacity: 0.6;
                 width: 425px;
-                font-size: 16px;
-                font-family: Gilroy;
+                @include small-text;
                 color: #1F3F68;
-                line-height: 26px;
-                letter-spacing: 0.5px;
             }
             div:nth-of-type(3){
                 button{
@@ -68,7 +89,7 @@ header{
                     background-color: #5A98D0;
                     border: none;
                     border-radius: 10px;
-                    font-family: Gilroy;
+                    font-family: Gilroy-Light;
                     line-height: 26px;
                     letter-spacing: 0.4px;
                     box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
@@ -78,8 +99,7 @@ header{
     }
 }
 main{
-    width: 1366px;
-    height: 3524px;
+    width: $screen-width;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -106,10 +126,7 @@ main{
                     >p{
                         width: 358px;
                         height: 138px;
-                        font-size: 36px;
-                        line-height: 46px;
-                        letter-spacing: 1px;
-                        font-family: Gilroy-Bold;
+                        @include large-text;
                         color: #1F3F68;
                     }
                 }
@@ -156,11 +173,8 @@ main{
                         }
                         p:nth-of-type(2){
                             opacity: 0.6;
-                            font-size: 16px;
-                            font-family: Gilroy-Light;
-                            line-height: 26px;
+                            @include small-text;
                             color: #1F3F68;
-                            letter-spacing: 0.5px;
                         }
                         a{
                             width: 127px;
@@ -181,7 +195,7 @@ main{
         }
     }
     .sect_two{
-        width: 100%;
+        width: $screen-width;
         height: 1310px;
         display: flex;
         justify-content: center;
@@ -199,19 +213,13 @@ main{
                 justify-content: space-between;
                 .title{
                     width: 227px;
-                    font-family: Gilroy-Bold;
-                    font-size: 36px;
-                    line-height: 46px;
-                    letter-spacing: 1px;
+                    @include large-text;
                     color: #1F3F68;
                 }
                 .desc{
                     width: 540px;
                     opacity: 0.6;
-                    font-family: Gilroy-Light;
-                    font-size: 16px;
-                    line-height: 26px;
-                    letter-spacing: 0.5px;
+                    @include small-text;
                     color: #1F3F68;
                 }
             }
@@ -224,7 +232,7 @@ main{
                 flex-direction: column;
                 >.top{
                     width: 965px;
-                    height: 445px;
+                    height: 417px;
                     background-image: url(./img/room.png);
                     border-radius: 10px;
                     display: flex;
@@ -266,10 +274,7 @@ main{
                             flex-direction: column;
                             margin: 48px;
                             p:nth-of-type(1){
-                                font-family: Gilroy-Light;
-                                font-size: 28px;
-                                line-height: 46px;
-                                letter-spacing: 1px;
+                                @include large-text;
                             }
                             p:nth-of-type(2){
                                 font-family: Gilroy-Light;
@@ -304,6 +309,228 @@ main{
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+    .sect_three{
+        width: $screen-width;
+        height: 1549px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        background-color: #5A98D0;
+        border-top-left-radius: 200px;
+        margin-top: 192px;
+        >div{
+            width: 100%;
+            height: 680px;
+            @extend %display-center;
+            >div{
+                width: 940px;
+                height: 459px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                >div{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    .title{
+                        width: 223px;
+                        height: 92px;
+                        @include large-text;
+                        color: white;
+                    }
+                    .desc{
+                        opacity: 0.6;
+                        width: 540px;
+                        height: 80px;
+                        @include small-text;
+                        color: white;
+                    }
+                }
+                >div:nth-of-type(2){
+                    width: 940px;
+                    height: 256px;
+                    display: flex;
+                    flex-direction: column;
+                    >div:nth-of-type(1){
+                        border-bottom: 1px solid rgb(255, 255, 255, 0.6);
+                    }
+                    >div:nth-of-type(2){
+                        >div:nth-of-type(4){
+                            background-color: rgb(31, 63, 104, 0.2);
+                        }
+                    }
+                    >div:nth-of-type(1), >div:nth-of-type(2){
+                        display: flex;
+                        justify-content: center;
+                        div{
+                            width: 235px;
+                            height: 128px;
+                            @extend %display-center;
+                            color: white;
+                            font-size: 20px;
+                            font-family: Gilroy-Bold;
+                            letter-spacing: 1px;
+                        }
+                        div:nth-of-type(1), div:nth-of-type(2), div:nth-of-type(3){
+                            border-right: 1px solid rgb(255, 255, 255, 0.6);
+                        }
+                    }
+                }
+            }
+        }
+        footer{
+            width: 1270px;
+            height: 896px;
+            background-color: #316099;
+            border-top-right-radius: 200px;
+            >div:nth-of-type(1){
+                width: 1073px;
+                height: 300px;
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid rgb(255, 255, 255, 0.6);
+                margin-top: 91px;
+                >div:nth-of-type(1){
+                    margin-left: 213px;
+                    width: 460px;
+                    height: 204px;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    >p:nth-of-type(1){
+                        width: 340px;
+                        @include large-text;
+                        color: white;
+                    }
+                    >p:nth-of-type(2){
+                        width: 460px;
+                        @include small-text;
+                        color: white;
+                        opacity: 0.6;
+                    }
+                }
+                >div:nth-of-type(2){
+                    width: 220px;
+                    height: 204px;
+                    @extend %display-center;
+                    button{
+                        width: 220px;
+                        height: 56px;
+                        border: none;
+                        background-color: #5A98D0;
+                        border-radius: 10px;
+                        color: white;
+                        font-family: Gilroy-Light;
+                        letter-spacing: 0.5px;
+                        font-size: 16px;
+                    }
+                }
+            }
+            >div:nth-of-type(2){
+                width: 1073px;
+                height: 318px;
+                margin-top: 96px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                >div:nth-of-type(1){
+                    width: 737px;
+                    height: 228px;
+                    margin-left: 213px;
+                    display: flex;
+                    justify-content: space-between;
+                    >div:nth-of-type(1){
+                        width: 300px;
+                        height: 228px;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                        >div:nth-of-type(1){
+                            width: 189px;
+                            height: 48px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            color: white;
+                            font-size: 28px;
+                            font-family: Gilroy-Bold;
+                        }
+                        >div:nth-of-type(2){
+                            width: 300px;
+                            height: 148px;
+                            display: flex;
+                            justify-content: space-between;
+                            flex-direction: column;
+                            color: white;
+                            >div{
+                                display: flex;
+                                align-items: start;
+                                justify-content: space-between;
+                                >p:nth-of-type(1){
+                                    width: 20px;
+                                    font-size: 16px;
+                                    font-family: Gilroy-Bold;
+                                }
+                                >p:nth-of-type(2){
+                                    width: 265px;
+                                    font-size: 16px;
+                                    font-family: Gilroy-Light;
+                                    letter-spacing: 0.5px;
+                                }
+                            }
+                        }
+                    }
+                    >div:nth-of-type(2), >div:nth-of-type(3){
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                        color: white;
+                        >p{
+                            font-size: 20px;
+                            line-height: 30px;
+                            font-family: Gilroy-Bold;
+                            letter-spacing: 0.5px;
+                        }
+                        >ul{
+                            list-style: none;
+                            height: 152px;
+                            display: flex;
+                            justify-content: space-between;
+                            flex-direction: column;
+                            li{
+                                >a{
+                                    text-decoration: none;
+                                    color: white;
+                                    font-size: 16px;
+                                    line-height: 26px;
+                                    font-family: Gilroy-Light;
+                                    letter-spacing: 0.5px;
+                                }
+                            }
+                        }
+                    }
+                    >div:nth-of-type(2){
+                        width: 163px;
+                        height: 214px;
+                    }
+                    >div:nth-of-type(3){
+                        width: 97px;
+                        height: 214px;
+                    }
+                }
+                >div:nth-of-type(2){
+                    margin-left: 213px;
+                    width: 300px;
+                    height: 26px;
+                    font-family: Gilroy-Light;
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    color: white;
+                    opacity: 0.4;
                 }
             }
         }

@@ -8,6 +8,8 @@ import Image1_1 from './img/1-1.png'
 import Image1_2 from './img/1-2.png'
 import Image1_3 from './img/1-3.png'
 
+import FooterLogo from './img/footerlogo.png'
+
 export default function Page(){
     return(
         <>
@@ -100,6 +102,108 @@ export default function Page(){
                             </div>
                         </div>
                     </div>
+                </section>
+                <section className='sect_three'>
+                    <div>
+                        <div>
+                            <div>
+                                <div className='title'>
+                                    <p>Our Beloved
+                                    Client</p>
+                                </div>
+                                <div className='desc'>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div>
+                                        <p>LOGO CLIENT 1</p>
+                                    </div>
+                                    <div>
+                                        <p>LOGO CLIENT 2</p>
+                                    </div>
+                                    <div>
+                                        <p>LOGO CLIENT 3</p>
+                                    </div>
+                                    <div>
+                                        <p>LOGO CLIENT 4</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <p>LOGO CLIENT 5</p>
+                                    </div>
+                                    <div>
+                                        <p>LOGO CLIENT 6</p>
+                                    </div>
+                                    <div>
+                                        <p>LOGO CLIENT 7</p>
+                                    </div>
+                                    <div>
+                                        <p>More Client</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>
+                        <div>
+                            <div>
+                                <p>Interested to work
+                                with our team?</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                            </div>
+                            <div>
+                                <button type="button">Let's Talk</button>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <div>
+                                        <img src={FooterLogo} alt="" />
+                                        <p>Afrianska</p>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <p>A.</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        </div>
+                                        <div>
+                                            <p>T.</p>
+                                            <p>+62-812-7313-4321</p>
+                                        </div>
+                                        <div>
+                                            <p>E.</p>
+                                            <p>hello.afrian@gmail.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>About US</p>
+                                    <ul>
+                                        <li><a href="">About</a></li>
+                                        <li><a href="">What We Do</a></li>
+                                        <li><a href="">Project</a></li>
+                                        <li><a href="">How It Work With Us</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p>Follow US</p>
+                                    <ul>
+                                        <li><a href="">Instagram</a></li>
+                                        <li><a href="">Facebook</a></li>
+                                        <li><a href="">LinkedIn</a></li>
+                                        <li><a href="">Youtube</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <p>2019 © Afrianska. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </footer>
                 </section>
             </main>
         </>
